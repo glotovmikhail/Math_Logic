@@ -5,7 +5,7 @@ import java.io.*;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("src/input.txt"), "UTF-8"));
+        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt"), "UTF-8"));
         PrintWriter p = new PrintWriter(new OutputStreamWriter(new FileOutputStream("output.txt"), "UTF-8"));
         int a = Integer.valueOf(in.readLine());
         String sc = "0";
@@ -14,9 +14,9 @@ public class Main {
             a--;
         }
         in.close();
-        in = new BufferedReader(new InputStreamReader(new FileInputStream("src/proof.txt"), "UTF-8"));
+        in = new BufferedReader(new InputStreamReader(new FileInputStream("proof.txt"), "UTF-8"));
         String first = "|-(" + sc + "+0')*(" + sc + "+0')=(" + sc + "*" + sc + ")+(0''*" + sc + ")+0'";
-        String beforeBeforeLast = "@" + sc + "((" + sc + "+0')*(" + sc + "+0')=(" + sc + "*" + sc + ")+(0''*" + sc + ")+0')->";
+        String beforeBeforeLast = "@a((a+0')*(a+0')=(a*a)+(0''*a)+0')->";
         String beforeLast = "((" + sc + "+0')*(" + sc + "+0')=(" + sc + "*" + sc + ")+(0''*" + sc + ")+0')";
         String last = "((" + sc + "+0')*(" + sc + "+0')=(" + sc + "*" + sc + ")+(0''*" + sc + ")+0')";
 
